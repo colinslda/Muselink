@@ -1,0 +1,78 @@
+/* css/style.css */
+
+/* Reset CSS (exemple simple) */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Styles de base pour la typographie */
+h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Couleurs principales (exemple) */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Mise en page générale (exemple simple avec Flexbox) */
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+#feed {
+    flex: 3; /* Occupe plus d'espace pour le contenu principal */
+    margin-right: 20px;
+}
+
+#recommendations {
+    flex: 1; /* Barre latérale */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+}
