@@ -1,0 +1,30 @@
+/* css/theme.css - Exemple de thème clair */
+
+:root {
+    --primary-color: #007bff; /* Bleu clair */
+    --secondary-color: #6c757d; /* Gris moyen */
+    --accent-color: #28a745;   /* Vert succès */
+    --background-color: #f4f4f4; /* Gris très clair */
+    --text-color: #333;        /* Gris foncé */
+
+    --font-family-base: sans-serif;
+    --font-size-base: 16px;
+
+    --border-radius-base: 5px;
+    --box-shadow-light: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+}
+
+/* Réutiliser les variables pour des styles spécifiques */
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.musician-card {
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--box-shadow-light);
+}
