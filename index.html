@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="images/logo.png" type="image/png">
-    </head>
+</head>
 <body>
     <header>
         <nav>
@@ -18,27 +18,150 @@
                 <button type="submit">Rechercher</button>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Mon Réseau</a></li>
-                <li><a href="#">Messages</a></li>
-                <li><a href="#">Profil</a></li>
+                <li><a href="#accueil" data-page="accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#reseau" data-page="reseau" class="nav-link">Mon Réseau</a></li>
+                <li><a href="#messages" data-page="messages" class="nav-link">Messages</a></li>
+                <li><a href="#profil" data-page="profil" class="nav-link">Profil</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="feed">
+        <section id="accueil-page" class="page active-page">
             <h2>Fil d'actualité</h2>
-            </section>
+            <div id="feed">
+                <article class="post">
+                    <div class="post-header">
+                        <img src="images/icons/icon-96x96.png" alt="Profil de l'utilisateur" class="post-avatar">
+                        <h3>Nom du Musicien</h3>
+                    </div>
+                    <div class="post-content">
+                        <p>Contenu du post... Ceci est un exemple de mise à jour d'un musicien sur son actualité musicale.</p>
+                        <div class="post-actions">
+                            <button class="btn btn-light">J'aime</button> <button class="btn btn-light">Commenter</button>
+                        </div>
+                    </div>
+                </article>
+                </div>
+            <aside id="recommendations">
+                <h3>Suggestions</h3>
+                <div class="musician-card">
+                    <img src="images/icons/icon-72x72.png" alt="Profil suggéré">
+                    <h3>Musicien Suggéré 1</h3>
+                    <p>Genre musical, instrument...</p>
+                    <button class="btn btn-primary">Se connecter</button>
+                </div>
+                </aside>
+        </section>
 
-        <aside id="recommendations">
-            <h3>Suggestions</h3>
-            </aside>
+        <section id="reseau-page" class="page">
+            <h2>Mon Réseau</h2>
+            <div id="my-network">
+                <h3>Mes Connexions</h3>
+                <ul class="connections-list">
+                    <li>
+                        <img src="images/icons/icon-72x72.png" alt="Profil connecté">
+                        <span>Musicien Connecté 1</span> <button class="btn btn-secondary">Voir Profil</button>
+                    </li>
+                    </ul>
+
+                <h3>Invitations</h3>
+                <ul class="invitations-list">
+                    <li>
+                        <img src="images/icons/icon-72x72.png" alt="Invitation reçue">
+                        <span>Musicien qui invite 1</span> <button class="btn btn-primary">Accepter</button> <button class="btn btn-secondary">Refuser</button>
+                    </li>
+                    </ul>
+
+                <h3>Personnes que vous pourriez connaître</h3>
+                <div class="musician-card">
+                    <img src="images/icons/icon-72x72.png" alt="Profil suggéré à connecter">
+                    <h3>Musicien Suggéré Réseau 1</h3>
+                    <p>Genre musical, instrument...</p>
+                    <button class="btn btn-primary">Se connecter</button>
+                </div>
+                </div>
+        </section>
+
+        <section id="messages-page" class="page">
+            <h2>Messages</h2>
+            <div id="messaging">
+                <div class="conversations-list">
+                    <h3>Conversations</h3>
+                    <ul class="conversation-items">
+                        <li class="conversation-item active-conversation">
+                            <img src="images/icons/icon-72x72.png" alt="Profil conversation">
+                            <span>Musicien Conversation 1</span>
+                        </li>
+                        <li class="conversation-item">
+                            <img src="images/icons/icon-72x72.png" alt="Profil conversation">
+                            <span>Musicien Conversation 2</span>
+                        </li>
+                        </ul>
+                </div>
+                <div class="message-area">
+                    <h3>Conversation avec Musicien Conversation 1</h3>
+                    <div class="message-thread">
+                        <div class="message received">
+                            <img src="images/icons/icon-72x72.png" alt="Profil message">
+                            <p>Salut ! Comment vas-tu ?</p>
+                        </div>
+                        <div class="message sent">
+                            <img src="images/icons/icon-72x72.png" alt="Profil message utilisateur">
+                            <p>Bien, et toi ? Ça avance ton projet ?</p>
+                        </div>
+                        </div>
+                    <div class="message-input">
+                        <textarea placeholder="Écrire un message..."></textarea>
+                        <button class="btn btn-primary">Envoyer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="profil-page" class="page">
+            <h2>Mon Profil</h2>
+            <div id="profile">
+                <div class="profile-header">
+                    <img src="images/icons/icon-128x128.png" alt="Votre Profil" class="profile-large-avatar">
+                    <h1>Votre Nom de Musicien</h1>
+                    <p>Votre titre ou spécialité musicale (ex: Guitariste, Producteur, Chanteur...)</p>
+                    <button class="btn btn-secondary">Modifier le profil</button>
+                </div>
+                <div class="profile-details">
+                    <h3>À propos de moi</h3>
+                    <p>Courte biographie ou description de votre parcours musical, de vos influences, etc.</p>
+
+                    <h3>Genres musicaux</h3>
+                    <ul class="genres-list">
+                        <li>Rock</li>
+                        <li>Blues</li>
+                        <li>Jazz</li>
+                        </ul>
+
+                    <h3>Instruments</h3>
+                    <ul class="instruments-list">
+                        <li>Guitare électrique</li>
+                        <li>Batterie</li>
+                        </ul>
+
+                    <h3>Localisation</h3>
+                    <p>Ville, Région</p>
+
+                    <h3>Liens</h3>
+                    <ul class="links-list">
+                        <li><a href="#">Votre site web</a></li>
+                        <li><a href="#">Votre page SoundCloud</a></li>
+                        <li><a href="#">Votre chaîne YouTube</a></li>
+                        </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2023 Music Connect. Tous droits réservés.</p>
-        </footer>
+    </footer>
 
     <script src="app.js"></script>
 </body>
