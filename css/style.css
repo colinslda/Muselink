@@ -76,3 +76,21 @@ footer {
     background-color: #eee;
     border-top: 1px solid #ddd;
 }
+
+/* Dans css/style.css ou css/components.css */
+
+/* Styles pour les sections de page */
+.page {
+    display: none; /* Masque toutes les sections de page par défaut */
+    padding: 20px;
+}
+
+.active-page {
+    display: block; /* Affiche la section de page active */
+}
+
+/* Style pour indiquer le lien de navigation actif */
+.nav-links .active {
+    font-weight: bold; /* Exemple: Met en gras le lien actif */
+    /* Vous pouvez ajouter d'autres styles pour l'état actif (couleur différente, soulignement, etc.) */
+}
